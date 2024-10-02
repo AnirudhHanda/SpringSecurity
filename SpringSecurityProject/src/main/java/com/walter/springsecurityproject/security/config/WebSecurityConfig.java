@@ -36,7 +36,7 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
+        // the registration end-point is kept open and public for all so that anyone can register and create an account
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf((csrf) -> csrf.disable())
                 .authorizeHttpRequests((auth) -> auth

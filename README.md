@@ -43,6 +43,8 @@ To get a local copy up and running, follow these simple steps.
    mvn clean install
 
 ## Project Structure
+
+```
 SpringSecurityProject/
 ├── src/
 │   ├── main/
@@ -57,6 +59,7 @@ SpringSecurityProject/
 │   ├── resources/
 │   │   ├── application.properties
 ├── pom.xml
+```
 
 ## Key Features
 
@@ -71,31 +74,32 @@ SpringSecurityProject/
 
 - **Commit Message**: "Initial project setup with Spring Boot and Maven"
 - **Description**: Set up the basic structure of the Spring Boot project with Maven.
+- 
+### Stage 2: Stateless Session and CSRF
 
-### Stage 2: User Registration
+- **Commit Message**: "Till learning how to make it all STATELESS and working without CSRF and disabling it with our own SecurityConfig file"
+- **Description**: Configured the application to use stateless sessions and disabled CSRF protection.
 
-- **Commit Message**: "User Registration implemented using BCrypt Password Encoder which is a one-way hashing technique to securely store passwords in the database"
-- **Description**: Created `RegistrationController` and `MyUserDetailsService` to handle user registration and save users to the database.
+### Stage 3: HTTP Security Configuration
 
-### Stage 3: Password Encoding
-
-- **Commit Message**: "Added BCrypt password encoding"
-- **Description**: Integrated BCrypt password encoder to securely store user passwords.
+- **Commit Message**: "The register end-point is made public so that new users do not already need to be authenticated in order to create a new account"
+- **Description**: Configured `WebSecurityConfig` to manage session policies, CSRF protection, and endpoint authorization.
 
 ### Stage 4: Custom UserDetailsService
 
 - **Commit Message**: "Security concepts learned till logging in the user using DaoAuthenticationProvider, our own UserDetailsService, AppUser, UserPrincipal which is the current user and an implementation of the UserDetails interface"
 - **Description**: Implemented `MyUserDetailsService` to load user-specific data during authentication.
 
-### Stage 5: HTTP Security Configuration
+### Stage 5: User Registration
 
-- **Commit Message**: "The register end-point is made public so that new users do not already need to be authenticated in order to create a new account"
-- **Description**: Configured `WebSecurityConfig` to manage session policies, CSRF protection, and endpoint authorization.
+- **Commit Message**: "User Registration implemented using BCrypt Password Encoder which is a one-way hashing technique to securely store passwords in the database"
+- **Description**: Created `RegistrationController` and `MyUserDetailsService` to handle user registration and save users to the database.
 
-### Stage 6: Stateless Session and CSRF
+### Stage 6: Password Encoding
 
-- **Commit Message**: "Till learning how to make it all STATELESS and working without CSRF and disabling it with our own SecurityConfig file"
-- **Description**: Configured the application to use stateless sessions and disabled CSRF protection.
+- **Commit Message**: "Added BCrypt password encoding"
+- **Description**: Integrated BCrypt password encoder to securely store user passwords.
+
 
 ## Running the Application
 
